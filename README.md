@@ -1,1 +1,3 @@
-# EBAC - Engenheiro de Qualidade de software - exercicio modulo 17 - Testes Mobile
+# EBAC - Engenheiro de Qualidade de Software
+
+## Exercício - Módulo 17 - Testes Mobile
