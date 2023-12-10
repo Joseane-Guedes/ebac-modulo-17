@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+
+     environment {
+        PATH = "/Users/joseane/.nvm/versions/node/v18.0.0/bin:$PATH"
+    }
+
+    stages {
+        stage('Clonar repositório') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Joseane-Guedes/ebac-modulo-17' 
+            }
+        }
+        stage('Instalar dependências') {
+            steps {
+                sh 'npm install'
+            }
+        }
+        stage('Executar testes') {
+            steps {
+                sh 'npm run cy:run'
+            }
+        }
+    }
+}
